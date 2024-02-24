@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*Typical device break points 
+
+pequenas telas: até 600px
+celular:de 600px 768px
+tablet:768px 992px
+desktop:992px 1200px
+grandes telas:acima de 1200px
+
+*/
+
+/*Configuração de impressora*/
+@media print {
+    body{
+        background: url(../img/back-print.jpg) no-repeat ;
+    }
+    #print{ 
+        display: block;
+        margin: auto;
+}
+    #phone, #tablet, #pc, #tv{ display: none; }
+}
+
+/*Configuração de tablet*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    html{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        background-image: url(../img/back-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    #tablet{ 
+        display: block;
+        margin: auto;
+}
+    #phone, #print, #pc, #tv{ display: none; }
+}
+
+/*Configuração de Desktop*/
+@media screen and (min-width:992px) and (max-width:1200px) {
+    html{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        background-image: url(../img/back-pc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    #pc{ 
+        display: block;
+        margin: auto;
+}
+    #phone, #print, #tablet, #tv{ display: none; }
+}
+
+/*Configuração de grandes telas*/
+@media screen and (min-width:1200px) {
+    html{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        background-image: url(../img/back-tv.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    #tv{ 
+        display: block;
+        margin: auto;
+}
+    #phone, #print, #tablet, #pc{ display: none; }    
+}
